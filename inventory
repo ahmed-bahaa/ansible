@@ -1,0 +1,21 @@
+
+[nginx]
+192.168.10.11
+
+[node]
+192.168.10.12
+
+[angular]
+192.168.10.13
+
+[mongo]
+192.168.10.14
+
+[all:children]
+nginx
+node
+angular
+mongo 
+
+[all:vars]
+ansible_ssh_user = vagrant

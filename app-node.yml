@@ -1,0 +1,6 @@
+---
+- name: configure nodejs application
+  hosts: node
+  become: true
+  roles:
+       - nodejs

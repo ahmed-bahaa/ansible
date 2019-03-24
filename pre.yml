@@ -2,8 +2,8 @@
   hosts: all
   become: true
   tasks:
-       - name: "install git, epel release and ntp"
-         yum: name= {{ item }} state=present
+       - name: install epel release and ntp
+         yum: name={{ item }} state=present
          with_items:
                    - epel-release
                    - ntp

@@ -1,0 +1,6 @@
+---
+- name: configure mongo server
+  hosts: mongo
+  become: true
+  roles:
+       - mongo

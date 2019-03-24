@@ -19,7 +19,7 @@
       dest: /var/nodejs/good_reads
 
 - name: install required packages
-  command: npm install /var/nodejs/good_reads/
+  command: npm install /var/nodejs/good_reads/good_reads/
   changed_when: false
 
 - name: check if nodejs is running
@@ -28,5 +28,5 @@
   changed_when: false
 
 - name: start nodejs app
-  command: forever start /var/nodejs/good_reads/index.js
-  when: " forever_list.stdout.find('/var/nodejs/good_reads/index.js') == -1"
+  command: forever start /var/nodejs/good_reads/good_reads/index.js
+  when: " forever_list.stdout.find('/var/nodejs/good_reads/good_reads/index.js') == -1"

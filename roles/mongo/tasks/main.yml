@@ -18,12 +18,14 @@
   package:
          name: mongodb-org
          state: latest
+  when: mongo_result != '/usr/bin/mongod'
+
+- name: start mongo 
+  service: name=mongod state=started
+
 - name: mongo configuration
   copy:
       src: mongod.conf
       dest: /etc/mongod.conf
   notify: restart mongo
-
-- name: start mongo 
-  service: name=mongod state=started
-
+  when: mongo_result != '/usr/bin/mongod'

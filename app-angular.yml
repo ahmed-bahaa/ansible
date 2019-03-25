@@ -1,0 +1,6 @@
+---
+- name: configure angular application
+  hosts: angular
+  become: true
+  roles:
+       - angular

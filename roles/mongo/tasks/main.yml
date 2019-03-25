@@ -16,8 +16,14 @@
  
 - name: install mongo 
   package:
-         name: mongodb-org-3.4
+         name: mongodb-org
          state: latest
+- name: mongo configuration
+  copy:
+      src: mongod.conf
+      dest: /etc/mongod.conf
+  notify: restart mongo
 
 - name: start mongo 
   service: name=mongod state=started
+

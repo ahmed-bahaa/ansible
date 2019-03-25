@@ -1,5 +1,5 @@
 - import_playbook: pre.yml
-#- import_playbook: web.yml
+- import_playbook: web.yml
 - import_playbook: app-node.yml
 #- import_playbook: app-angular.yml
 - import_playbook: mongo.yml

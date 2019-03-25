@@ -1,0 +1,7 @@
+---
+- name: nginx server 
+  hosts: nginx
+  become: true
+  roles:
+       - web
+

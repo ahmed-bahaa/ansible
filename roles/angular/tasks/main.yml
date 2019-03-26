@@ -37,9 +37,6 @@
   register: forever_list
   changed_when: false
 
-- debug:
-    msg: "{{ lookup('env', 'PWD') }}"
-
 - name: start nodejs app
   command: "forever start /var/angular/good_reads/goodReads/node_modules/@angular/cli/bin/ng serve --host 0.0.0.0"
   when: " forever_list.stdout.find('/var/angulr/good_reads/goodReads') == -1"

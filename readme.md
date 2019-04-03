@@ -6,7 +6,7 @@
 * Angularjs
 
 ### prerequisite
-_centos7
+_centos7_
 ### Installation
 * setup your environment using vagrant file which contains:
   * master
@@ -17,3 +17,6 @@ _centos7
 * install master ssh key on the remaining servers 
 * install ansible 
 * clone my playbook 
+
+### Running the Playbook
+`$ ansible-playbook -i inventory main-play.yml`
